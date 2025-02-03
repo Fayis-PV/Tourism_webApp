@@ -10,5 +10,7 @@ urlpatterns = [
 
     path('list_destination', list_destinations, name= 'list_destination'),
     path('create_destination', create_destination, name='create_destination'),
-    path('details_destination/<int:pk>', details_destination, name ='details_destination')
+    path('details_destination/<int:pk>', details_destination, name ='details_destination'),
+    path('update_destination/<int:pk>', update_destination, name='update_destination'),
+    path('delete_destination/<int:pk>', delete_destination, name='delete_destination'),
 ]

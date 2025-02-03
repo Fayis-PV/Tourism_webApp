@@ -78,3 +78,8 @@ def details_destination(request,pk):
     return redirect('/list_destination')
 
 
+def update_destination(request,pk):
+    pass
+
+def delete_destination(request,pk):
+    pass
