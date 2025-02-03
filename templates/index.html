@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title%}Destination Lists{%endblock title%}
+
+{% block content %}
+<div class="row mt-5 pt-5 mx-3">
+    {% for data in datas %}
+    <div class="col-sm-2 col-md-3">
+        <div class="card" >
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <a class="h5 card-title" href="{% url 'details_destination' data.id %}">{{data.name}}</a>
+                <h6 class="card-subtitle mb-2 text-muted">{{data.district}} | {{data.state}}</h6>
+                <p class="card-text">{{data.description}}</p>
+                <a href="{{data.g_map}}" class="card-link">Google Map</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+    {% endblock content %}
