@@ -8,11 +8,11 @@
     {% for data in datas %}
     <div class="col-sm-2 col-md-3">
         <div class="card" >
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img src="{{data.image_set__first}}" class="card-img-top bg-secondary" alt="{{data.name}}">
             <div class="card-body">
                 <a class="h5 card-title" href="{% url 'details_destination' data.id %}">{{data.name}}</a>
                 <h6 class="card-subtitle mb-2 text-muted">{{data.district}} | {{data.state}}</h6>
-                <p class="card-text">{{data.description}}</p>
+                <p class="card-text">{{data.description|truncatechars:100}}</p>
                 <a href="{{data.g_map}}" class="card-link">Google Map</a>
                 <a href="#" class="card-link">Another link</a>
             </div>
